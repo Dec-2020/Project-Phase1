@@ -1,6 +1,5 @@
 package amazon;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -31,7 +30,9 @@ public class AmazonSearch {
 		List<WebElement> pName = driver.findElements(By.xpath("//h2/a/span[@class='a-size-medium a-color-base a-text-normal']"));
 		List<WebElement> pPrice = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
 		
-
+		System.out.println("Total count is :" + pName.size());
+		System.out.println("\nProduct Details :");
+		
 		for(int i = 0; i <= pName.size()-1; i++) {
 			
 			if(pName.get(i).getText().contains("Apple iPhone 12")) {
